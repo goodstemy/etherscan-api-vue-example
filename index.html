@@ -9,16 +9,21 @@
 </head>
 <body>
 
-    <div class="accounts" v-if="isTransactionsLoaded">
-        <h3>Transactions:</h3>
-        <ul>
-            <li v-for="transaction in transactions">
-                {{ transaction }}
-            </li>
-        </ul>
+    <div class="accounts">
+        <template v-if="isTransactionsLoaded">
+            <h3>Transactions:</h3>
+            <ul>
+                <li v-for="transaction in transactions">
+                    {{ transaction }}
+                </li>
+            </ul>
+        </template>
+        <template v-else>
+            <h3>Transactions are not loaded yet, please wait...</h3>
+        </template>
     </div>
-    <h3 v-else>Transactions are not loaded yet, please wait...</h3>
 
+    
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
 
