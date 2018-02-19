@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div class="accounts">
+    <div class="accounts" v-if="isTransactionsLoaded">
         <h3>Transactions:</h3>
         <ul>
             <li v-for="transaction in transactions">
@@ -17,6 +17,7 @@
             </li>
         </ul>
     </div>
+    <h3 v-else>Transactions are not loaded yet, please wait...</h3>
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>

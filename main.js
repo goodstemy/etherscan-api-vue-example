@@ -4,7 +4,8 @@ var vue = new Vue({
   el: '.accounts',
 
   data: {
-    transactions: []
+    transactions: [],
+    isTransactionsLoaded: false
   },
 
   created: function() {
@@ -24,6 +25,8 @@ function getTransactions() {
     '&topic0=0xf63780e752c6a54a94fc52715dbc5518a3b4c3c2833d301a204226548a2a8545\n' +
     '&apikey=' + API_TOKEN)
     .then(function(response) {
+      vue.isTransactionsLoaded = true;
+
       for (var i = 0; i <= 99; i++) {
 
         vue.transactions.push(
