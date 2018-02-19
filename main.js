@@ -1,4 +1,4 @@
-var API_TOKEN = 'BVD9Z395WNEIRP95519WWBR11UZ7CBTV49';
+var API_TOKEN = 'YOUR-API-TOKEN-ON-ETHERSCAN.IO';
 
 var vue = new Vue({
   el: '.accounts',
